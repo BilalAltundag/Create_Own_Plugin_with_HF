@@ -9,9 +9,9 @@ To get started, follow these steps:
 
 Clone the Hugging Face Plugin repository:
 
-'''
+''''
 git clone https://github.com/CASIA-IVA-Lab/FastSAM.git
-'''
+''''
 
 Download the pretrained weights:
 
