@@ -15,16 +15,16 @@ git clone https://github.com/CASIA-IVA-Lab/FastSAM.git
 
 Download the pretrained weights:
 
-'''
+```python
 wget https://huggingface.co/spaces/An-619/FastSAM/resolve/main/weights/FastSAM.pt
-'''
+```
 
 Install the required dependencies:
 
-'''
+```python
 pip install -r FastSAM/requirements.txt
 pip install git+https://github.com/openai/CLIP.git
-'''
+```
 
 ## Setup
 
@@ -34,49 +34,49 @@ Set the transformers_version to the desired version (e.g., "v4.29.0") using the 
 
 Install the necessary libraries and dependencies:
 
-'''
+```python
 pip install huggingface_hub>=0.14.1 git+https://github.com/huggingface/transformers@$transformers_version -q diffusers accelerate datasets torch soundfile sentencepiece opencv-python openai
-'''
+```
 
 ## Authenticate with your Hugging Face account:
 
-'''
+```python
 from huggingface_hub import notebook_login
 notebook_login()
-'''
+```
 
 Initialize the agent by providing the required credentials:
 
 ## For StarCoder (HF Token):
 
-'''
+```python
 from transformers.tools import HfAgent
 agent = HfAgent("https://api-inference.huggingface.co/models/bigcode/starcoder", token=token)
 print("StarCoder is initialized 💪")
-'''
+```
 
 ## For OpenAssistant (HF Token):
 
-'''
+```python
 from transformers.tools import HfAgent
 agent = HfAgent(url_endpoint="https://api-inference.huggingface.co/models/OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5", token=token)
 print("OpenAssistant is initialized 💪")
-'''
+```
 
 ## For OpenAI (API Key):
 
-'''
+```python
 from transformers.tools import OpenAiAgent
 pswd = getpass.getpass('OpenAI API key:')
 agent = OpenAiAgent(model="text-davinci-003", api_key=pswd)
 print("OpenAI is initialized 💪")
-'''
+```
 
 ## Examples
 ### Customer Information Agent
 You can create a customer information agent using a DataFrame. Here's an example:
 
-'''
+```python
 import pandas as pd
 
 data = [
@@ -100,12 +100,12 @@ def get_customer_info(name, last_name=None):
         return "No customer found."
     else:
         return filtered_df.to_dict('records')
-'''
+```
 
 ### Fast Sam Agent
 You can perform image segmentation using the Fast Sam model. Here's an example:
 
-'''
+```python
 from PIL import Image
 
 class FastSamTool(Tool):
@@ -121,7 +121,7 @@ class FastSamTool(Tool):
 
         image = Image.open(f"./output/{image}")
         return image
-'''
+```
 
 ## Conclusion
 With the Hugging Face Plugin, you have the power to streamline your development process and automate various tasks using a single language model. Explore the provided examples and unleash your creativity to build your own efficient tools. Happy coding!
