@@ -3,6 +3,8 @@
 
 Welcome to the Hugging Face Plugin documentation! This plugin is designed to supercharge your development workflow, enabling you to accomplish tasks faster and more efficiently. With a single language model, you can build a wide range of tools and automate repetitive coding tasks.
 
+This is colab notebook link : [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]([https://colab.research.google.com/github/weiji14/deepbedmap/](https://colab.research.google.com/drive/1ss7V29Hs8WzelezKdRubjp7blWxXX0Gl?usp=sharing)]
+
 ## Installation
 
 To get started, follow these steps:
